@@ -1,0 +1,34 @@
+
+    const [palabraFiltrar, setPalabrafiltrar] = useState("All");
+
+    let arrayPintar = [];
+    //ESTO LO QUE HACE ES QUE FUNCIONE Y BUSQUE FILTROS O TEXTO SOLO AL DAR AL BOTON BUSCAR
+    const buscar = () => { 
+        //.toLowerCase() : cogemos la palabra buscada y lo ponemos en minusculas
+        //console.log(palabraFiltrar) 
+        //console.log(palabraBuscar)
+        let arrayPintar = props.theproducts.filter(element => element.title.toLowerCase().trim().includes(palabraBuscar.toLowerCase().trim()) === true);
+        // console.log(arrayPintar)
+        if ((palabraFiltrar==="All")&&((palabraBuscar===""))){
+            //console.log("busca todo")
+            setCargarLista(arrayPintar);
+        }else if((palabraFiltrar==="All")&&(palabraBuscar!=="")){
+            //console.log("busca palabra")
+            setCargarLista(arrayPintar);
+        }else if((palabraFiltrar!=="All")&&(palabraBuscar==="")){
+            //console.log("busca filtro")
+            let arrayFiltrados = props.theproducts.filter(element => element.category.includes(palabraFiltrar) === true);
+            setCargarLista(arrayFiltrados);
+        }else{
+            //console.log("busca palabra y filtro")
+            let arrayTexto = props.theproducts.filter(element => element.title.toLowerCase().trim().includes(palabraBuscar.toLowerCase().trim()) === true);
+            let arrayFiltro = arrayTexto.filter(element => element.category.includes(palabraFiltrar) === true);
+            setCargarLista(arrayFiltro);
+        }
+    }
+    ------------------------------------------------------------------------------------------------------------------------------------------------------
+            <Form.Select id="selector" size='sm' onChange={e=>setPalabrafiltrar(e.target.value)}>
+                <option>All</option>
+                {categorias()}
+            </Form.Select>
+

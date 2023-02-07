@@ -1,0 +1,8 @@
+
+    const cargarSelector= cargarLista.reduce(
+        //Como si fuera funcion con parametros: function(valorAnterior,valorActual) 
+        (acumulador, valorActual) =>
+                (acumulador.find(element => element==valorActual.category)) ? acumulador : acumulador.push(valorActual.category)
+            , []
+        
+    ); //EL VALOR INICIAL ES EL VALOR INICIAL DEL ACUMULADOR

@@ -36,3 +36,115 @@
     transform: rotate(360deg);
   }
 }
+
+/* Del Header */
+#cabecera {
+  background-color: #282c34;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0cm;
+}
+
+.logo {
+  width: 70px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.mensaje {
+  color: #c9eced;
+  margin-left: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#titulo {
+  text-align: center
+}
+#buscar{
+  margin: 1%;
+}
+.input{
+  margin: 1%;
+}
+
+/* De SearchPage */
+#items{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+li {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#photo{
+  height: 100px;
+  width: 100px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+#selector{
+  width: auto;
+  margin-left: 20px;
+}
+
+#buscadores{
+  align-items: center;
+  display: flex;
+  margin-left: 30%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/* Lista */
+.unproducto{
+  background-color: black;
+}
+li:hover {/*Cuando pase el raton por encima*/
+  background: rgb(0, 30, 62);
+}
+
+/* Vista */
+#contenedorvista{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+}
+#imgproduct{
+  float:left;
+	margin: 10px;
+  margin-left: 15%;
+}
+#infoproduct{
+  float:right;
+  margin:10px;
+  margin-top: 15%;
+  margin-right: 15%;
+  text-align: left;
+}
+#volver{
+  background-color: rgb(33, 0, 124);
+  color:#ccc
+}
