@@ -1,4 +1,5 @@
-Practica 2 de la asignatura Computación Red (react)
+Práctica de la asignatura Ingeniería Web de la ETSIT
+**(React)**
 
 Pagina que te muestra un catalogo de productos
 ![Image text](https://github.com/jorgemolinal/Catalogo-Productos/blob/main/miscapturas/Captura%20de%20Pantalla%202022-10-11%20a%20las%2015.02.09.png)
